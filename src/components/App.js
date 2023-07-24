@@ -1,38 +1,13 @@
-
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import './../styles/App.css';
+import Modal from './Modal';
 
 const App = () => {
-
-     let[onshow,setOnshow] = useState(false);
- 
-     function show(){
-      setOnshow(true);
-     }
-
-     function close(){
-      setOnshow(false);
-     }
-
+  const[show,setShow]=useState(false);
   return (
-    <div className="container">
-       <div className="model-overlay">
-         <button onClick={show}>Show Modal</button>
-          
-          { onshow === true && <div className="para">
-            
-              <div className="model-close">
-                <button onClick={close}>Close</button>
-              </div>
-              <div className="model-close">
-                  <p>This is The Content of The Modal</p>
-              </div>
-
-          </div>           
-            }     
-      
-          
-       </div>
+    <div>
+      <button className='btn' onClick={()=>setShow(true)}>Show Modal</button>
+      <Modal visible={show} onClose={()=>setShow(false)} children={<p className='model-p'>This is the content of the modal.</p>}/>
     </div>
   )
 }
