@@ -1,1 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: "border-box";
+}
 
+.container{
+    margin: 50px auto;
+    width: fit-content;
+    height: fit-content;
+   
+}
+
+button{
+    padding: 8px;
+    background-color: orangered;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+p{
+    margin-left: 10px;
+}
+
+.para{
+    margin-left: 10px;
+    height: 100px;
+    width: 250px;
+    background-color: lightblue;
+    border: 2px solid gray;
+    border-radius: 5px ;
+}
